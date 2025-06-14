@@ -1,3 +1,10 @@
+-- gObl00x Notification
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+	Title = "gOb scripts";
+	Text = "LOL Time to Exploit!";
+	Icon = "rbxthumb://type=Asset&id=126389658690593&w=150&h=150"})
+Duration = 15;
+
 -- Dance 1 (The Hero)
 local player = game.Players.LocalPlayer
 local backpack = player:WaitForChild("Backpack")
