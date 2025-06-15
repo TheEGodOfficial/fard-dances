@@ -1,5 +1,4 @@
 -- gObl00x Notification
-
 game:GetService("StarterGui"):SetCore("SendNotification", { 
 	Title = "gOb scripts";
 	Text = "LOL Time to Exploit!";
