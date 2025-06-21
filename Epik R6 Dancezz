@@ -757,9 +757,13 @@ tool.Equipped:Connect(function()
         sound.Parent = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
         sound:Play()
     end
+
+    player.Character.Humanoid.WalkSpeed = 10
+
 end)
 
 tool.Unequipped:Connect(function()
+    player.Character.Humanoid.WalkSpeef = 16
     if Anim then
         Anim:Stop()
         Anim:Destroy()
@@ -1163,9 +1167,13 @@ tool.Equipped:Connect(function()
         sound.Parent = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
         sound:Play()
     end
+
+    player.Character.Humanoid.WalkSpeed = 8
+
 end)
 
 tool.Unequipped:Connect(function()
+    player.Character.Humanoid.WalkSpeed = 16
     if Anim then
         Anim:Stop()
         Anim:Destroy()
@@ -1213,9 +1221,13 @@ tool.Equipped:Connect(function()
         sound.Parent = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
         sound:Play()
     end
+
+    player.Character.Humanoid.WalkSpeed = 20
+
 end)
 
 tool.Unequipped:Connect(function()
+    player.Character.Humanoid.WalkSpeed = 16
     if Anim then
         Anim:Stop()
         Anim:Destroy()
@@ -1425,4 +1437,54 @@ tool.Unequipped:Connect(function()
         sound:Destroy()
     end
     print("Dance 28 and music stopped")
+end)
+
+
+-- Dance 29 (Epik)
+local player = game.Players.LocalPlayer
+local backpack = player:WaitForChild("Backpack")
+
+-- Create the tool
+local tool = Instance.new("Tool")
+tool.Name = "Epik"
+tool.RequiresHandle = false
+tool.Parent = backpack
+
+-- Load Animator if not already loaded
+if not getgenv()["Animator"] then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
+    end
+
+local Anim = nil
+local sound = nil
+
+tool.Equipped:Connect(function()
+    local character = player.Character
+    if character then
+        Anim = Animator.new(character, 135424282094138)
+        Anim:Play()
+        Anim.Stopped:Connect(function()
+            Anim:Play()
+        end)
+             
+        writefile("Epik.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Epik.mp3"))     
+        sound = Instance.new("Sound")
+        sound.SoundId = getcustomasset("Epik.mp3")
+        sound.Volume = 2
+        sound.Looped = true
+        sound.Parent = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+        sound:Play()
+    end
+end)
+
+tool.Unequipped:Connect(function()
+    if Anim then
+        Anim:Stop()
+        Anim:Destroy()
+    end
+    if sound then
+        sound:Stop()
+        sound:Destroy()
+    end
+    print("Dance 29 and music stopped")
 end)
