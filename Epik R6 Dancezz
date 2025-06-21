@@ -1470,7 +1470,7 @@ tool.Name = "Shigure"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
-        writefile("Loli Shigure Dance.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Loli%20Shigure%20Dance.mp3"))
+        writefile("Loli Dance.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Loli%20Dance.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -1488,7 +1488,7 @@ tool.Equipped:Connect(function()
             Anim:Play()
         end)
         sound = Instance.new("Sound")
-        sound.SoundId = getcustomasset("Loli Shigure Dance.mp3")
+        sound.SoundId = getcustomasset("Loli Dance.mp3")
         sound.Volume = 2
         sound.Looped = true
         sound.Parent = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
