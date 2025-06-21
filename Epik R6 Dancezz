@@ -15,6 +15,7 @@ tool.Name = "The Hero"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("The Hero.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/The%20Hero.mp3"))     
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -31,8 +32,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-             
-        writefile("The Hero.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/The%20Hero.mp3"))     
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("The Hero.mp3")
         sound.Volume = 2
@@ -66,6 +65,7 @@ tool.Name = "Two"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Two.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Two.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -82,8 +82,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Two.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Two.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Two.mp3")
         sound.Volume = 2
@@ -117,6 +115,7 @@ tool.Name = "The Flop"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("The Flop.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/The%20Flop.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -133,8 +132,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("The Flop.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/The%20Flop.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("The Flop.mp3")
         sound.Volume = 2
@@ -168,6 +165,7 @@ tool.Name = "Club Penguin"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Club Penguin.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Club%20Penguin.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -184,8 +182,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Club Penguin.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Club%20Penguin.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Club Penguin.mp3")
         sound.Volume = 2
@@ -219,6 +215,7 @@ tool.Name = "Breakdance"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Breakdance.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Breakdance.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -235,8 +232,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Breakdance.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Breakdance.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Breakdance.mp3")
         sound.Volume = 2
@@ -270,6 +265,7 @@ tool.Name = "Insanity"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Insanity.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Insanity.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -286,8 +282,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Insanity.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Insanity.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Insanity.mp3")
         sound.Volume = 2
@@ -321,6 +315,7 @@ tool.Name = "Mannrobics"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Mannrobics.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Mannrobics.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -337,8 +332,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Mannrobics.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Mannrobics.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Mannrobics.mp3")
         sound.Volume = 2
@@ -372,6 +365,7 @@ tool.Name = "Step"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Step.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Step.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -388,8 +382,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Step.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Step.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Step.mp3")
         sound.Volume = 2
@@ -426,6 +418,7 @@ tool.Name = "Poke Dance"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Poke Dance.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Poke%20Dance.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -442,8 +435,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Poke Dance.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Poke%20Dance.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Poke Dance.mp3")
         sound.Volume = 2
@@ -477,7 +468,7 @@ tool.Name = "Spooky Month"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
-
+        writefile("Spooky Month.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Spooky%20Month.mp3"))
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
     end
@@ -493,8 +484,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Spooky Month.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Spooky%20Month.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Spooky Month.mp3")
         sound.Volume = 2
@@ -528,6 +517,7 @@ tool.Name = "Chinese Dance"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Chinese Dance.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Chinese%20Dance.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -544,8 +534,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Chinese Dance.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Chinese%20Dance.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Chinese Dance.mp3")
         sound.Volume = 2
@@ -579,6 +567,7 @@ tool.Name = "Doodle"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Doodle.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Doodle.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -595,8 +584,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Doodle.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Doodle.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Doodle.mp3")
         sound.Volume = 2
@@ -630,6 +617,7 @@ tool.Name = "Shinji Chair"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Shinji Meme.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Shinji%20Meme.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -646,8 +634,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Shinji Meme.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Shinji%20Meme.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Shinji Meme.mp3")
         sound.Volume = 2
@@ -681,6 +667,7 @@ tool.Name = "Rakuten Lemonade"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Rakuten Lemonade.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Rakuten%20Lemonade.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -697,8 +684,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Rakuten Lemonade.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Rakuten%20Lemonade.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Rakuten Lemonade.mp3")
         sound.Volume = 2
@@ -732,6 +717,7 @@ tool.Name = "Lonely Lonely (Hakari)"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Lonely Lonely.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Lonely%20Lonely.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -748,8 +734,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Lonely Lonely.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Lonely%20Lonely.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Lonely Lonely.mp3")
         sound.Volume = 2
@@ -763,7 +747,7 @@ tool.Equipped:Connect(function()
 end)
 
 tool.Unequipped:Connect(function()
-    player.Character.Humanoid.WalkSpeef = 16
+    player.Character.Humanoid.WalkSpeed = 16
     if Anim then
         Anim:Stop()
         Anim:Destroy()
@@ -787,6 +771,7 @@ tool.Name = "Boppin"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Boppin.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Boppin.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -803,8 +788,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Boppin.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Boppin.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Boppin.mp3")
         sound.Volume = 2
@@ -838,6 +821,7 @@ tool.Name = "Shuba Duck"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Hey Ya.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Hey%20Ya.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -854,8 +838,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Hey Ya.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Hey%20Ya.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Hey Ya.mp3")
         sound.Volume = 2
@@ -889,6 +871,7 @@ tool.Name = "Goopie"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Goopie.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Goopie.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -905,8 +888,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Goopie.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Goopie.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Goopie.mp3")
         sound.Volume = 2
@@ -940,6 +921,7 @@ tool.Name = "Prince of Egypt"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Prince Of Egypt.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Prince%20Of%20Egypt.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -956,8 +938,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Prince Of Egypt.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Prince%20Of%20Egypt.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Prince Of Egypt.mp3")
         sound.Volume = 2
@@ -991,6 +971,7 @@ tool.Name = "WMD Boombox"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Wipe me Down.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Wipe%20me%20Down.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -1007,8 +988,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Wipe me Down.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Wipe%20me%20Down.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Wipe me Down.mp3")
         sound.Volume = 2
@@ -1042,6 +1021,7 @@ tool.Name = "Shoo Whop"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Shoo Whop.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Shoo%20Whop.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -1058,8 +1038,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Shoo Whop.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Shoo%20Whop.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Shoo Whop.mp3")
         sound.Volume = 2
@@ -1092,6 +1070,7 @@ tool.Name = "PoPiPo"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("PoPiPo.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/PoPiPo.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -1108,8 +1087,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("PoPiPo.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/PoPiPo.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("PoPiPo.mp3")
         sound.Volume = 2
@@ -1142,6 +1119,7 @@ tool.Name = "Monoko"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Monoko.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Monoko.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -1158,8 +1136,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Monoko.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Monoko.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Monoko.mp3")
         sound.Volume = 2
@@ -1196,6 +1172,7 @@ tool.Name = "Lagtrain"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Lagtrain.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Lagtrain.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -1212,8 +1189,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-        
-        writefile("Lagtrain.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Lagtrain.mp3"))
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Lagtrain.mp3")
         sound.Volume = 2
@@ -1250,6 +1225,7 @@ tool.Name = "Inside In My Head"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("In My Head.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/In%20My%20Head.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -1266,8 +1242,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-             
-        writefile("In My Head.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/In%20My%20Head.mp3"))     
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("In My Head.mp3")
         sound.Volume = 2
@@ -1300,6 +1274,7 @@ tool.Name = "Lemon Melon Cookie"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("LMC.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/LMC.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -1316,8 +1291,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-             
-        writefile("LMC.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/LMC.mp3"))     
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("LMC.mp3")
         sound.Volume = 2
@@ -1350,6 +1323,7 @@ tool.Name = "Get Down"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Get Down.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Get%20Down.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -1366,8 +1340,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-             
-        writefile("Get Down.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Get%20Down.mp3"))     
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Get Down.mp3")
         sound.Volume = 2
@@ -1400,6 +1372,7 @@ tool.Name = "Dia Delicia"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Dia Delicia.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Dia%20Delicia.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -1416,8 +1389,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-             
-        writefile("Dia Delicia.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Dia%20Delicia.mp3"))     
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Dia Delicia.mp3")
         sound.Volume = 2
@@ -1450,6 +1421,7 @@ tool.Name = "Epik"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
+        writefile("Epik.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Epik.mp3"))
 -- Load Animator if not already loaded
 if not getgenv()["Animator"] then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
@@ -1466,8 +1438,6 @@ tool.Equipped:Connect(function()
         Anim.Stopped:Connect(function()
             Anim:Play()
         end)
-             
-        writefile("Epik.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Epik.mp3"))     
         sound = Instance.new("Sound")
         sound.SoundId = getcustomasset("Epik.mp3")
         sound.Volume = 2
@@ -1487,4 +1457,53 @@ tool.Unequipped:Connect(function()
         sound:Destroy()
     end
     print("Dance 29 and music stopped")
+end)
+
+
+-- Dance 30 (Shigure)
+local player = game.Players.LocalPlayer
+local backpack = player:WaitForChild("Backpack")
+
+-- Create the tool
+local tool = Instance.new("Tool")
+tool.Name = "Shigure"
+tool.RequiresHandle = false
+tool.Parent = backpack
+
+        writefile("Loli Shigure Dance.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Loli%20Shigure%20Dance.mp3"))
+-- Load Animator if not already loaded
+if not getgenv()["Animator"] then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
+    end
+
+local Anim = nil
+local sound = nil
+
+tool.Equipped:Connect(function()
+    local character = player.Character
+    if character then
+        Anim = Animator.new(character, 14887006269)
+        Anim:Play()
+        Anim.Stopped:Connect(function()
+            Anim:Play()
+        end)
+        sound = Instance.new("Sound")
+        sound.SoundId = getcustomasset("Loli Shigure Dance.mp3")
+        sound.Volume = 2
+        sound.Looped = true
+        sound.Parent = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+        sound:Play()
+    end
+end)
+
+tool.Unequipped:Connect(function()
+    if Anim then
+        Anim:Stop()
+        Anim:Destroy()
+    end
+    if sound then
+        sound:Stop()
+        sound:Destroy()
+    end
+    print("Dance 30 and music stopped")
 end)
