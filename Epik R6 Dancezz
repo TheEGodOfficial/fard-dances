@@ -1705,13 +1705,13 @@ tool.Unequipped:Connect(function()
 end)
 
 
--- Dance 35 (Pretty)
+-- Dance 35 (Pretty Princess)
 local player = game.Players.LocalPlayer
 local backpack = player:WaitForChild("Backpack")
 
 -- Create the tool
 local tool = Instance.new("Tool")
-tool.Name = "Pretty"
+tool.Name = "Pretty Princess"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
