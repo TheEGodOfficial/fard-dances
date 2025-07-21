@@ -1705,13 +1705,13 @@ tool.Unequipped:Connect(function()
 end)
 
 
--- Dance 35 (Pretty Princess)
+-- Dance 35 (Pretty)
 local player = game.Players.LocalPlayer
 local backpack = player:WaitForChild("Backpack")
 
 -- Create the tool
 local tool = Instance.new("Tool")
-tool.Name = "Pretty Princess"
+tool.Name = "Pretty"
 tool.RequiresHandle = false
 tool.Parent = backpack
 
@@ -1751,4 +1751,53 @@ tool.Unequipped:Connect(function()
         sound:Destroy()
     end
     print("Dance 35 and music stopped")
+end)
+
+
+-- Dance 36 (Pog Dance)
+local player = game.Players.LocalPlayer
+local backpack = player:WaitForChild("Backpack")
+
+-- Create the tool
+local tool = Instance.new("Tool")
+tool.Name = "Pog Dance"
+tool.RequiresHandle = false
+tool.Parent = backpack
+
+        writefile("Sun FNAF.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Sun%20FNAF.mp3"))
+-- Load Animator if not already loaded
+if not getgenv()["Animator"] then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/xhayper/Animator/main/Source/Main.lua"))()
+    end
+
+local Anim = nil
+local sound = nil
+
+tool.Equipped:Connect(function()
+    local character = player.Character
+    if character then
+        Anim = Animator.new(character, 4300228160)
+        Anim:Play()
+        Anim.Stopped:Connect(function()
+            Anim:Play()
+        end)
+        sound = Instance.new("Sound")
+        sound.SoundId = getcustomasset("Sun FNAF.mp3")
+        sound.Volume = 2
+        sound.Looped = true
+        sound.Parent = game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart")
+        sound:Play()
+    end
+end)
+
+tool.Unequipped:Connect(function()
+    if Anim then
+        Anim:Stop()
+        Anim:Destroy()
+    end
+    if sound then
+        sound:Stop()
+        sound:Destroy()
+    end
+    print("Dance 36 and music stopped")
 end)
