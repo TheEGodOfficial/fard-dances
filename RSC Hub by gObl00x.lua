@@ -123,7 +123,7 @@ EXPLOIT1.TextScaled = true
 EXPLOIT1.TextSize = 14.000
 EXPLOIT1.TextWrapped = true
 EXPLOIT1.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Mr.Bye%20Bye.lua.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Mr.Bye%20Bye.lua"))()
 end)
 
 MainFrameCenterBeautyA.Name = "MainFrameCenterBeautyA"
@@ -155,7 +155,7 @@ EXPLOIT5.TextScaled = true
 EXPLOIT5.TextSize = 14.000
 EXPLOIT5.TextWrapped = true
 EXPLOIT5.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Goner.lua.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Goner.lua"))()
 end)
 
 EXPLOIT9.Name = "EXPLOIT9"
@@ -171,7 +171,7 @@ EXPLOIT9.TextScaled = true
 EXPLOIT9.TextSize = 14.000
 EXPLOIT9.TextWrapped = true
 EXPLOIT9.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Soul%20Reaper.lua.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Soul%20Reaper.lua"))()
 end)
 
 EXPLOIT6.Name = "EXPLOIT6"
@@ -187,7 +187,7 @@ EXPLOIT6.TextScaled = true
 EXPLOIT6.TextSize = 14.000
 EXPLOIT6.TextWrapped = true
 EXPLOIT6.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Doom%20Slayer.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Doom%20Slayer.lua"))()
 end)
 
 EXPLOIT7.Name = "EXPLOIT7"
@@ -219,7 +219,7 @@ EXPLOIT8.TextScaled = true
 EXPLOIT8.TextSize = 14.000
 EXPLOIT8.TextWrapped = true
 EXPLOIT8.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/Pendulum-Fixed-AND-Others-Scripts/refs/heads/main/Server%20Admin"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Server%20Admin.lua"))()
 end)
 
 EXPLOIT10.Name = "EXPLOIT10"
@@ -309,7 +309,7 @@ EXPLOIT4.BorderSizePixel = 0
 EXPLOIT4.Position = UDim2.new(0.024271844, 0, 0.711026609, 0)
 EXPLOIT4.Size = UDim2.new(0, 92, 0, 32)
 EXPLOIT4.Font = Enum.Font.Cartoon
-EXPLOIT4.Text = "Ultimate Meme Dance"
+EXPLOIT4.Text = "Memeus V2.01"
 EXPLOIT4.TextColor3 = Color3.fromRGB(255, 0, 0)
 EXPLOIT4.TextScaled = true
 EXPLOIT4.TextSize = 14.000
