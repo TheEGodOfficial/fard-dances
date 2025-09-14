@@ -19,7 +19,6 @@ local PlayerGui = Player.PlayerGui
 local Cam = Space.CurrentCamera
 local Backpack = Player.Backpack
 local Character = Player.Character
-local Ch = Character:GetChildren()
 local Humanoid = Character.Humanoid
 local Mouse = Player:GetMouse()
 local RootPart = Character["HumanoidRootPart"]
