@@ -123,7 +123,7 @@ EXPLOIT1.TextScaled = true
 EXPLOIT1.TextSize = 14.000
 EXPLOIT1.TextWrapped = true
 EXPLOIT1.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Mr.Bye%20Bye.lua?token=GHSAT0AAAAAADFI4YZJORE4MPY4UN5FHAIQ2FSODYQ"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Mr.Bye%20Bye.lua"))()
 end)
 
 MainFrameCenterBeautyA.Name = "MainFrameCenterBeautyA"
@@ -155,7 +155,7 @@ EXPLOIT5.TextScaled = true
 EXPLOIT5.TextSize = 14.000
 EXPLOIT5.TextWrapped = true
 EXPLOIT5.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Goner.lua?token=GHSAT0AAAAAADFI4YZID4REKD5OCYG6CAAA2FSOBTA"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Goner.lua"))()
 end)
 
 EXPLOIT9.Name = "EXPLOIT9"
@@ -171,7 +171,7 @@ EXPLOIT9.TextScaled = true
 EXPLOIT9.TextSize = 14.000
 EXPLOIT9.TextWrapped = true
 EXPLOIT9.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Soul%20Reaper.lua?token=GHSAT0AAAAAADFI4YZJPC5K3MTG7ML3KBOS2FSOFPQ"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Soul%20Reaper.lua"))()
 end)
 
 EXPLOIT6.Name = "EXPLOIT6"
@@ -187,7 +187,7 @@ EXPLOIT6.TextScaled = true
 EXPLOIT6.TextSize = 14.000
 EXPLOIT6.TextWrapped = true
 EXPLOIT6.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Mr.Pixels.lua?token=GHSAT0AAAAAADFI4YZJ5U3UCFVE7IONJUXM2FSOHLA"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Mr.Pixels.lua"))()
 end)
 
 EXPLOIT7.Name = "EXPLOIT7"
@@ -203,7 +203,7 @@ EXPLOIT7.TextScaled = true
 EXPLOIT7.TextSize = 14.000
 EXPLOIT7.TextWrapped = true
 EXPLOIT7.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Sin%20Dragon.lua?token=GHSAT0AAAAAADFI4YZJR2OJCBDGRN57GQPE2FSOJOQ"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Sin%20Dragon.lua"))()
 end)
 
 EXPLOIT8.Name = "EXPLOIT8"
@@ -219,7 +219,7 @@ EXPLOIT8.TextScaled = true
 EXPLOIT8.TextSize = 14.000
 EXPLOIT8.TextWrapped = true
 EXPLOIT8.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Server%20Admin.lua?token=GHSAT0AAAAAADFI4YZINN4YCTZI5Q4BSVRI2FSOLLA"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Server%20Admin.lua"))()
 end)
 
 EXPLOIT10.Name = "EXPLOIT10"
@@ -235,7 +235,7 @@ EXPLOIT10.TextScaled = true
 EXPLOIT10.TextSize = 14.000
 EXPLOIT10.TextWrapped = true
 EXPLOIT10.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Chara.lua?token=GHSAT0AAAAAADFI4YZJUKGKGQJGHGX4ZQ3I2FSONUQ"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Chara.lua"))()
 end)
 
 EXPLOIT11.Name = "EXPLOIT11"
@@ -283,7 +283,7 @@ EXPLOIT2.TextScaled = true
 EXPLOIT2.TextSize = 14.000
 EXPLOIT2.TextWrapped = true
 EXPLOIT2.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Lost%20Hope%20Scythe.lua?token=GHSAT0AAAAAADFI4YZJXJHL22ZOWQ4SZMCG2FSOQIA"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Lost%20Hope%20Scythe.lua"))()
 end)
 
 EXPLOIT3.Name = "EXPLOIT3"
@@ -299,7 +299,7 @@ EXPLOIT3.TextScaled = true
 EXPLOIT3.TextSize = 14.000
 EXPLOIT3.TextWrapped = true
 EXPLOIT3.MouseButton1Down:connect(function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Internal%20War.lua?token=GHSAT0AAAAAADFI4YZIZXJFZCPPER7SFVMM2FSOSOQ"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/My-Converts/refs/heads/main/Internal%20War.lua"))()
 end)
 
 EXPLOIT4.Name = "EXPLOIT4"
