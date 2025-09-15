@@ -108,12 +108,15 @@ Knife.Activated:Connect(function()
     AnimAtt.AnimationId = "rbxassetid://".. Stab
     trackAttack = Humanoid:LoadAnimation(AnimAtt)
     trackAttack:Play()
-    
+
+    local hitCooldown = {}
     local connection
     connection = Knife.Handle.Touched:Connect(function(hit)
-        if hit.Parent:FindFirstChild("Humanoid") then
-            local Humanoid1 = hit.Parent.Humanoid
-            Humanoid1:TakeDamage(2.5)
+        local Humanoid1 = hit.Parent:FindFirstChild("Humanoid")
+        if Humanoid1 and not hitCooldown[Humanoid1] then
+            hitCooldown[Humanoid1] = true
+            Humanoid1:TakeDamage(7.3)
+
             local stabSound = IT("Sound", Knife.Handle)
             stabSound.SoundId = "rbxassetid://18512256042"
             stabSound.Volume = 5
@@ -121,11 +124,11 @@ Knife.Activated:Connect(function()
             game.Debris:AddItem(stabSound, 1)
         end
     end)
-    
-    trackAttack.Stopped:Connect(function()
-        connection:Disconnect()
-    end)
-    
+
+    trackAttack.Stopped:Wait()
+    hitCooldown = {}
+    connection:Disconnect()
+
     -- Knife Slash
     local slashKnife = IT("Sound", Character)
     slashKnife.Name = "Slash"
