@@ -6,6 +6,8 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
      Duration = 15
 })
 
+warn("SERVER IN DANGER ALERT")
+
 -- Guest 666 CHARACTER
 local Guest = game:GetObjects("rbxassetid://2788748777")[1]
 --//====================================================\\--
@@ -267,7 +269,7 @@ function BurningEff(part)
     eff3.Color = ColorSequence.new(C3(1,0,0))
 end
 
--- Trail of Corruption
+-- Trail of Corruption // 666 Tag
 local lastTrace
 local running = true
 local function Loop()
@@ -284,7 +286,7 @@ local function Loop()
             lastTrace.Transparency = .3
             lastTrace.CanCollide = false
             lastTrace.Anchored = true
-            lastTrace.CFrame = Torso.CFrame - VT(0,3,0)
+            lastTrace.CFrame = Torso.Position - VT(0,3,0)
             BurningEff(lastTrace)
             game.Debris:AddItem(lastTrace, 2)
         end
@@ -350,18 +352,23 @@ end)
 -- Paralel loop
 task.spawn(Loop)
 
-local dead = IT("Sound", SoundService)
+local dead = IT("Sound", Torso.Position)
 dead.SoundId = "rbxassetid://264486467"
 dead.Volume = 10
-local scream = IT("Sound", SoundService)
+dead.Looped = false
+--
+local scream = IT("Sound", Torso.Position)
 scream.SoundId = "rbxassetid://11984351"
 scream.Volume = 7
 scream.PlaybackSpeed = 0.7
+scream.Looped = false
+--
 local deathmus = IT("Sound", Space)
 deathmus.SoundId = "rbxassetid://1840493961"
 deathmus.Volume = 5.7
 deathmus.PlaybackSpeed = 0.7
 deathmus.Looped = true
+--
 local nightwind = IT("Sound", Space)
 nightwind.SoundId = "rbxassetid://172313730"
 nightwind.Volume = 6.8
@@ -451,7 +458,7 @@ running = false
 local pat = IT("Part", Space)
 pat.Transparency = 1
 pat.Anchored = true
-pat.CFrame = Torso.CFrame
+pat.CFrame = Torso.Position
 naeeym.Parent = pat
 naeeym.Adornee = pat
 skybox.Parent = Space
@@ -474,6 +481,8 @@ ex.Visible = false
 ex.BlastRadius = 999999999999999999999999
 ex.BlastPressure = 9999999999999999999999999
 end)
+
+error("The horror of Roblox has arrived..")
 
 --//====================================================\\--
 --||			     END OF HORROR SCRIPT
