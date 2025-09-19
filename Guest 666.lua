@@ -286,7 +286,7 @@ local function Loop()
             lastTrace.Transparency = .3
             lastTrace.CanCollide = false
             lastTrace.Anchored = true
-            lastTrace.CFrame = Torso.Position - VT(0,3,0)
+            lastTrace.CFrame = Torso.CFrame - VT(0,3,0)
             BurningEff(lastTrace)
             game.Debris:AddItem(lastTrace, 2)
         end
@@ -352,12 +352,12 @@ end)
 -- Paralel loop
 task.spawn(Loop)
 
-local dead = IT("Sound", Torso.Position)
+local dead = IT("Sound", SoundService)
 dead.SoundId = "rbxassetid://264486467"
 dead.Volume = 10
 dead.Looped = false
 --
-local scream = IT("Sound", Torso.Position)
+local scream = IT("Sound", SoundService)
 scream.SoundId = "rbxassetid://11984351"
 scream.Volume = 7
 scream.PlaybackSpeed = 0.7
@@ -458,7 +458,7 @@ running = false
 local pat = IT("Part", Space)
 pat.Transparency = 1
 pat.Anchored = true
-pat.CFrame = Torso.Position
+pat.CFrame = Torso.CFrame
 naeeym.Parent = pat
 naeeym.Adornee = pat
 skybox.Parent = Space
@@ -482,7 +482,7 @@ ex.BlastRadius = 999999999999999999999999
 ex.BlastPressure = 9999999999999999999999999
 end)
 
-error("The horror of Roblox has arrived..")
+warn("The horror of Roblox has arrived..")
 
 --//====================================================\\--
 --||			     END OF HORROR SCRIPT
