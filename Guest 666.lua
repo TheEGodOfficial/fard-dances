@@ -28,11 +28,11 @@ warn("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>
 
 			print("  <>Controls<>	")
 
-	print("Q: Ghost Echo <> (Ghosts Exist, and He Wants to Dismember u..)")
+	print("[Q] Ghost Echo <•> (Ghosts Exist, and He Wants to Dismember u..)")
 	
-	print("G: Scary Laugh <> (Scary)")
+	print("[G] Scary Laugh <•> (Scary)")
 	
-	print("H: Threat <> (ur the TARGET)")
+	print("[H] Threat <•> (ur the TARGET)")
 	
 
 -- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --
