@@ -117,12 +117,11 @@ Knife.Activated:Connect(function()
         local Humanoid1 = hit.Parent:FindFirstChild("Humanoid")
         if Humanoid1 and not hitCooldown[Humanoid1] then
             hitCooldown[Humanoid1] = true
-            Humanoid1:TakeDamage(7.3)
-
             local stabSound = IT("Sound", Knife.Handle)
             stabSound.SoundId = "rbxassetid://18512256042"
             stabSound.Volume = 5
             stabSound:Play()
+            Humanoid1:TakeDamage(7.3)
             game.Debris:AddItem(stabSound, 1)
         end
     end)
@@ -341,7 +340,7 @@ task.spawn(function()
             elseif sel == 2 then
                 tecks.Text = "REVENGE"
             elseif sel == 3 then
-                tecks.Text = "DESTROY ALL"
+                tecks.Text = "DESTROY Y'ALL"
             end
         else
             tecks.Text = "Guest 666"
@@ -352,7 +351,7 @@ end)
 -- Paralel loop
 task.spawn(Loop)
 
-local dead = IT("Sound", SoundService)
+local dead = IT("Sound", Torso.Parent)
 dead.SoundId = "rbxassetid://264486467"
 dead.Volume = 10
 dead.Looped = false
@@ -370,8 +369,8 @@ deathmus.PlaybackSpeed = 0.7
 deathmus.Looped = true
 --
 local nightwind = IT("Sound", Space)
-nightwind.SoundId = "rbxassetid://172313730"
-nightwind.Volume = 6.8
+nightwind.SoundId = "rbxassetid://238895410"
+nightwind.Volume = 9
 nightwind.Looped = true
 
 -- Soundtrack
@@ -383,8 +382,8 @@ Theme666.SoundId = "rbxassetid://101593989848708"
 Theme666.Pitch = 0.077
 Theme666:Play()
 -- Specs
-local warn = IT("Hint", PlayerGui)
-warn.Text = "Keys: [Q] = Ghost Echo, [G] = Scary Laugh, [H] = Threat"
+local Hint = IT("Hint", PlayerGui)
+Hint.Text = "Keys: [Q] = Ghost Echo, [G] = Scary Laugh, [H] = Threat"
 
 --//====================================================\\--
 --||			         STUFF
@@ -462,11 +461,15 @@ pat.CFrame = Torso.CFrame
 naeeym.Parent = pat
 naeeym.Adornee = pat
 skybox.Parent = Space
-tecks.Text = "I'LL RETURN"
-tecks.FontSize = "Size48"
-tecks.TextColor3 = C3(1,0,0)
+--
+if tecks.Text == "Guest 666" or tecks.Text == "Bullied.." or tecks.Text == "REVENGE" or tecks.Text == "DESTROY Y'ALL" then
+    tecks.TextSize = 48
+    tecks.TextColor3 = C3(1,0,0)
+    tecks.Text = "I'LL RETURN"
+end
+--
 Theme666:Destroy()
-warn:Destroy()
+Hint:Destroy()
 dead:Play()
 scream:Play()
 deathmus:Play()
@@ -482,7 +485,7 @@ ex.BlastRadius = 999999999999999999999999
 ex.BlastPressure = 9999999999999999999999999
 end)
 
-warn("The horror of Roblox has arrived..")
+error("The horror of Roblox has arrived..")
 
 --//====================================================\\--
 --||			     END OF HORROR SCRIPT
