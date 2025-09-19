@@ -6,10 +6,37 @@ game:GetService("StarterGui"):SetCore("SendNotification", {
      Duration = 15
 })
 
-warn("SERVER IN DANGER ALERT")
-
 -- Guest 666 CHARACTER
 local Guest = game:GetObjects("rbxassetid://2788748777")[1]
+
+------
+warn("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>")	
+warn(">Guest 666 the Roblox Horror<")
+warn("               Script created by gObl00x for fun.")
+warn("<><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><>")
+--]]
+		> ͔͈̱̲̆̄ͫ̾They ̙̰̠͕ͤcalled ̗̭͇͈̖̠̔̌me,̸͓̠ͨ̍̌ͩ̾ͭ ̷̝͔̺̯̖̰̓͌ͫ͆͋ͩͅt͐̃rash ̯͙̓ͯ̍̔͡<
+
+
+		>They ͂͢Pushed ̺̤͍͈ͨ̈́͢me ̙͚̓̾into ͔darkness..<
+
+
+		>Now ̮̥͔̝̟̅̅͌ͭ̃ͯͨ͠Y'ALL ͚̬̥̹͔͉̥ͦ̚WILL ͪSUFFER ̶̰̻̬̠̀͗̈́̐ inṯ̨ͥͣͮ̊ỏ̶̳̦̘̲͒̈̚̚ ̫͎̪̲͔̮ͨ́̉͂ͯ̿̚͞ͅa͙̯̤̺̹͕͝ ͍̈́͗͛̈́b̫͊̔̔͋͆ͥͮe͆t̩͈̬̖̽ͬt̩̺̗̬͓̟̱ͭe͉͔ͅr̸͐̈́͋̐ ̢͍͉͕͚͚̖͍p͈̝͗̔́̔͌̿l͙̘̪̺͑ͥ́͗̇ͧ͜a̘̝͓̙͖̥ͩ̈c̨͖̫̩̞͇ͮe͉ͧ̌'<
+--]]
+
+-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --
+
+			print("  <>Controls<>	")
+
+	print("Q: Ghost Echo <> (Ghosts Exist, and He Wants to Dismember u..)")
+	
+	print("G: Scary Laugh <> (Scary)")
+	
+	print("H: Threat <> (ur the TARGET)")
+	
+
+-- <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> --
+
 --//====================================================\\--
 --||			   GUEST 666 CREATED BY GOBL00X
 --\\====================================================//--
@@ -37,7 +64,7 @@ local LeftShoulder = Torso["Left Shoulder"]
 local RightHip = Torso["Right Hip"]
 local LeftHip = Torso["Left Hip"]
 local UserInputService = game:GetService("UserInputService")
-local SoundService = game:GetService("SoundService")
+local SS = game:GetService("SoundService")
 
 IT = Instance.new
 CF = CFrame.new
@@ -356,7 +383,7 @@ dead.SoundId = "rbxassetid://264486467"
 dead.Volume = 10
 dead.Looped = false
 --
-local scream = IT("Sound", SoundService)
+local scream = IT("Sound", SS)
 scream.SoundId = "rbxassetid://11984351"
 scream.Volume = 7
 scream.PlaybackSpeed = 0.7
@@ -484,8 +511,6 @@ ex.Visible = false
 ex.BlastRadius = 999999999999999999999999
 ex.BlastPressure = 9999999999999999999999999
 end)
-
-error("The horror of Roblox has arrived..")
 
 --//====================================================\\--
 --||			     END OF HORROR SCRIPT
