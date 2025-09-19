@@ -106,10 +106,17 @@ Knife.Equipped:Connect(function()
 end)
 
 Knife.Activated:Connect(function()
+    -- Knife Slash Anim
     local AnimAtt = IT("Animation")
     AnimAtt.AnimationId = "rbxassetid://".. Stab
     trackAttack = Humanoid:LoadAnimation(AnimAtt)
     trackAttack:Play()
+    -- Knife Slash Sound
+    local slashKnife = IT("Sound", Character)
+    slashKnife.Name = "Slash"
+    slashKnife.SoundId = "rbxassetid://18512262218"
+    slashKnife.Volume = 5
+    slashKnife:Play()
 
     local hitCooldown = {}
     local connection
@@ -129,13 +136,6 @@ Knife.Activated:Connect(function()
     trackAttack.Stopped:Wait()
     hitCooldown = {}
     connection:Disconnect()
-
-    -- Knife Slash
-    local slashKnife = IT("Sound", Character)
-    slashKnife.Name = "Slash"
-    slashKnife.SoundId = "rbxassetid://18512262218"
-    slashKnife.Volume = 5
-    slashKnife:Play()
 end)
 
 Knife.Unequipped:Connect(function()
