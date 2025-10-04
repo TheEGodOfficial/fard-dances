@@ -9,7 +9,7 @@ if isfolder and not isfolder("Epik Musics") then
   makefolder("Epik Musics")
 end
 --//==============================================================================================//--
---||		EPIK R6 DANCEZZZ CREATED BY gObl00x // NEW ANIMATOR BY WHOEVER HELL MADE IT VRUH
+--||		EPIK R6 DANCEZZZ CREATED BY gObl00x // NEW ANIMATOR6D
 --\\===========================================================================================//--
 
 local Players = game:GetService("Players")
