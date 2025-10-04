@@ -10,6 +10,7 @@ if isfolder and not isfolder("Epik Musics") then
 end
 --//==============================================================================================//--
 --||		EPIK R6 DANCEZZZ CREATED BY gObl00x // NEW ANIMATOR6D
+--|| Ya sorry, I'll not make all these animations or the ones from the previous version to CFrames
 --\\===========================================================================================//--
 
 local Players = game:GetService("Players")
