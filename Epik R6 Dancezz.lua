@@ -100,7 +100,14 @@ if not EffectFolder then
 	EffectFolder.Name = "EffectFolder"
 	EffectFolder.Parent = Character
 end
---
+-- Effects Cache
+mesh = IT("SpecialMesh")
+mesh.MeshId = "rbxassetid://1439035575"
+mesh.TextureId = "rbxassetid://1439035619"
+mesh.Scale = V3(1, 1, 1.5)
+mesh.Offset = V3(0, -0.4, 0)
+mesh.Parent = EffectFolder
+
 -- Music Cache
 local Music1 = IT("Sound", EffectFolder)
 Music1.Name = "Smug"
@@ -524,12 +531,7 @@ end
 local Boombox = game:GetObjects("rbxassetid://93309532260574")[1].Emotes.AnimSaves["Rapper box"]
 --
 tool12.Equipped:Connect(function()
-    if Character then
-        mesh = IT("SpecialMesh")
-        mesh.MeshId = "rbxassetid://1439035575"
-        mesh.TextureId = "rbxassetid://1439035619"
-        mesh.Scale = V3(1, 1, 1.5)
-        mesh.Offset = V3(0, -0.4, 0)
+    if Character and mesh.Parent == EffectFolder then
         mesh.Parent = handle
         Humanoid.WalkSpeed = 0
        getgenv().Animator6D(Boombox, 1, true)
@@ -548,9 +550,8 @@ if Music12.Parent == Character and Music12.Playing then
     Music12:Stop()
     Music12.Parent = EffectFolder
     end
-     if mesh then
-        mesh:Destroy()
-        mesh = nil
+     if mesh.Parent == handle then
+        mesh.Parent = EffectFolder
      end
     print("Dance 12 and music stopped")
 end)
