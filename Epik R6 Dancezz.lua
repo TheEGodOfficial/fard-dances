@@ -137,6 +137,10 @@ local Music13 = IT("Sound", EffectFolder)
 Music13.Name = "Take The L"
 local Music14 = IT("Sound", EffectFolder)
 Music14.Name = "Secret"
+local Music15 = IT("Sound", EffectFolder)
+Music15.Name = "Caramelldansen"
+local Music16 = IT("Sound", EffectFolder)
+Music16.Name = "Spooky Month"
 --------------------------
 ----- ANIMATOR 6D --------
 if not getgenv().Animator6D then
@@ -620,4 +624,70 @@ Humanoid.WalkSpeed = 16
     Music14.Parent = EffectFolder
 end
     print("Dance 14 and music stopped")
+end)
+
+
+-- // Caramelldansen Tool Dance \\ --
+local tool15 = IT("Tool", Backpack)
+tool15.Name = "Caramelldansen"
+tool15.RequiresHandle = false
+--
+if not isfile("Epik Musics/caramell.mp3") then
+       writefile("Epik Musics/caramell.mp3", game:HttpGet("https://github.com/Nitro-GT/music/raw/refs/heads/main/caramell.mp3"))
+end
+local caramell = game:GetObjects("rbxassetid://6929983041")[1].AnimSaves:FindFirstChild("Imported Animation Clip")
+--
+tool15.Equipped:Connect(function()
+    if Character then
+        Humanoid.WalkSpeed = 2.5
+       getgenv().Animator6D(caramell, 1, true)
+-- Music
+Music15.Parent = Character
+Music15.SoundId = getcustomasset("Epik Musics/caramell.mp3")
+Music15.Looped = true
+Music15:Play()
+end
+end)
+
+tool15.Unequipped:Connect(function()
+if Music15.Parent == Character and Music15.Playing then
+Humanoid.WalkSpeed = 16
+    getgenv().Animator6DStop()
+    Music15:Stop()
+    Music15.Parent = EffectFolder
+end
+    print("Dance 15 and music stopped")
+end)
+
+
+-- // Spooky Month Tool Dance \\ --
+local tool16 = IT("Tool", Backpack)
+tool16.Name = "Spooky Month"
+tool16.RequiresHandle = false
+--
+if not isfile("Epik Musics/Spooky Month.mp3") then
+       writefile("Epik Musics/Spooky Month.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Spooky%20Month.mp3"))
+end
+local Spooky = game:GetObjects("rbxassetid://11512762330")[1].AnimSaves:FindFirstChild("Pump Idle")
+--
+tool16.Equipped:Connect(function()
+    if Character then
+        Humanoid.WalkSpeed = 2.5
+       getgenv().Animator6D(Spooky, 1, true)
+-- Music
+Music16.Parent = Character
+Music16.SoundId = getcustomasset("Epik Musics/Spooky Month.mp3")
+Music16.Looped = true
+Music16:Play()
+end
+end)
+
+tool16.Unequipped:Connect(function()
+if Music16.Parent == Character and Music16.Playing then
+Humanoid.WalkSpeed = 16
+    getgenv().Animator6DStop()
+    Music16:Stop()
+    Music16.Parent = EffectFolder
+end
+    print("Dance 16 and music stopped")
 end)
