@@ -141,11 +141,11 @@ local Music15 = IT("Sound", EffectFolder)
 Music15.Name = "Caramelldansen"
 local Music16 = IT("Sound", EffectFolder)
 Music16.Name = "Spooky Month"
+local Music17 = IT("Sound", EffectFolder)
+Music17.Name = "Boogie Down"
 --------------------------
 ----- ANIMATOR 6D --------
-if not getgenv().Animator6D then
-   loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/Stuff/refs/heads/main/Animator6D.lua"))()
-end
+loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/Stuff/refs/heads/main/Animator6D.lua"))()
 --------------------------
 
   --_/ STARTING \__--
@@ -690,4 +690,33 @@ Humanoid.WalkSpeed = 16
     Music16.Parent = EffectFolder
 end
     print("Dance 16 and music stopped")
+end)
+
+
+-- // Boogie Down Tool Dance \\ --
+local tool17 = IT("Tool", Backpack)
+tool17.Name = "Boogie Down"
+tool17.RequiresHandle = false
+local Boogie = game:GetObjects("rbxassetid://16621824519")[1].AnimSaves:FindFirstChild("Boogie Down")
+--
+tool17.Equipped:Connect(function()
+    if Character then
+        Humanoid.WalkSpeed = 1.5
+       getgenv().Animator6D(Boogie, 1.1, true)
+Music17.Parent = Character
+Music17.SoundId = getcustomasset("Epik Musics/boogie.mp3")
+Music17.Looped = true
+Music17.PlaybackSpeed = 2
+Music17:Play()
+end
+end)
+
+tool17.Unequipped:Connect(function()
+if Music17.Parent == Character and Music17.Playing then
+Humanoid.WalkSpeed = 16
+    getgenv().Animator6DStop()
+    Music17:Stop()
+    Music17.Parent = EffectFolder
+end
+    print("Dance 17 and music stopped")
 end)
