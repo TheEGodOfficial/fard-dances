@@ -1,12 +1,17 @@
 -- gObl00x Notification
 game:GetService("StarterGui"):SetCore("SendNotification", { 
-	Title = "gOb scripts";
-	Text = "LOL Time to Exploit!";
-	Icon = "rbxtHumanoidb://type=Asset&id=126389658690593&w=150&h=150"})
-Duration = 15;
+    Title = "gOb scripts",
+    Text = "LOL Time to Exploit!",
+    Icon = "rbxassetid://126389658690593",
+    Duration = 15
+})
 -- MusicFolder
-if isfolder and not isfolder("Epik Musics") then
-  makefolder("Epik Musics")
+if makefolder and not isfolder("Epik Musics") then
+    makefolder("Epik Musics")
+end
+-- THEME
+if not isfile("Epik Musics/Friday Theme.mp3") then
+       writefile("Epik Musics/Friday Theme.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Friday%20Theme.mp3"))
 end
 --//==============================================================================================//--
 --||		EPIK R6 DANCEZZZ CREATED BY gObl00x // NEW ANIMATOR6D
@@ -15,83 +20,122 @@ end
 
 local Players = game:GetService("Players")
 local Player = Players.LocalPlayer
-local Character = Player.Character
+local Character = Player.Character or Player.CharacterAdded:Wait()
 local Humanoid = Character:FindFirstChildOfClass("Humanoid")
 local Backpack = Player.Backpack
 local RootPart = Character:WaitForChild("HumanoidRootPart")
 local Mouse = Player:GetMouse()
+local SS = game:GetService("SoundService")
+local IsDancing = false
+local currentAnim = nil
 IT = Instance.new
 V3 = Vector3.new
 CF = CFrame.new
 RAD = math.rad
 
+----- ANIMATOR 6D --------
+if not getgenv().Animator6D or getgenv().Animator6DStop then
+    getgenv().Animator6DLoadedPro = nil
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/Stuff/refs/heads/main/Animator6D.lua"))()
+end
+--------------------------
+
 --// CAMERA FOLLOWS HEAD (Without changing CameraSubject) \\--
 local RunService = game:GetService('RunService')
-
-local PlayerMouse = Player:GetMouse()
-local Camera = workspace.CurrentCamera
-local Humanoid = Character:WaitForChild('Humanoid')
-local IsR6 = (Humanoid.RigType == Enum.HumanoidRigType.R6)
-local Head = Character:WaitForChild('Head')
-local Torso = if IsR6
-	then Character:WaitForChild('Torso')
-	else Character:WaitForChild('UpperTorso')
-local Neck = if IsR6
-	then Torso:WaitForChild('Neck')
-	else Head:WaitForChild('Neck')
-local Waist = if IsR6 then nil else Torso:WaitForChild('Waist')
-
-local NeckOriginC0 = Neck.C0
-local WaistOriginC0 = if Waist then Waist.C0 else nil
-
-local AllowedStates = {
-	Enum.HumanoidStateType.Running,
-	Enum.HumanoidStateType.Climbing,
-	Enum.HumanoidStateType.Swimming,
-	Enum.HumanoidStateType.Freefall,
-	Enum.HumanoidStateType.Seated,
-}
-
-local find = table.find
-local atan = math.atan
-local atan2 = math.atan2
+local Head = Character:FindFirstChild("Head")
 
 RunService.RenderStepped:Connect(function(deltaTime: number)
-	local function Alpha(n)
-		return math.clamp(n * deltaTime * 60, 0, 1)
-	end
-	Humanoid.CameraOffset = Humanoid.CameraOffset:Lerp(
-		(RootPart.CFrame * CF(0, 1.5, 0)):PointToObjectSpace(Head.Position),
-		Alpha(0.15)
-	)
-	if IsAllowedState then
-		local HeadPosition = Head.Position
-		if Neck then
-			local MousePos = PlayerMouse.Hit.Position
-			local TranslationVector = (HeadPosition - MousePos).Unit
-			local Pitch = atan(TranslationVector.Y)
-			local Yaw = TranslationVector:Cross(Torso.CFrame.LookVector).Y
-			local Roll = atan(Yaw)
+local function Alpha(n)
+   return math.clamp(n * deltaTime * 60, 0, 1)
+end
+	Humanoid.CameraOffset = Humanoid.CameraOffset:Lerp((RootPart.CFrame * CF(0, 1.5, 0)):PointToObjectSpace(Head.Position),Alpha(0.15))
+end)
+-------------------------------------------------------------
 
-			local NeckCFrame
-			if IsR6 then
-				NeckCFrame = CFrame.Angles(Pitch, 0, Yaw)
-			else
-				NeckCFrame = CFrame.Angles(-Pitch * 0.5, Yaw, -Roll * 0.5)
-				local waistCFrame = CFrame.Angles(-Pitch * 0.5, Yaw * 0.5, 0)
-				Waist.C0 = Waist.C0:Lerp(
-					WaistOriginC0 * waistCFrame,
-					updatesPerSecond * deltaTime
-				)
-			end
-			Neck.C0 = Neck.C0:Lerp(
-				NeckOriginC0 * NeckCFrame,
-				updatesPerSecond * deltaTime
-			)
+-- // CHANGE DEFAULT ANIMS WITH EPIK ANIMS \\ --
+----------------------------------------------------
+-- // Get animations \\ --
+local animPack = game:GetObjects("rbxassetid://11405076389")[1].R6["Run + Walk + Jump + Fall R6"]
+local AnimFolder = animPack:FindFirstChild("AnimSaves")
+
+local IdleAnim = game:GetObjects("rbxassetid://16600175853")[1].AnimSaves:FindFirstChild("Idle 7")
+local WalkAnim = AnimFolder:FindFirstChild("Walk V4")
+local JumpAnim = AnimFolder:FindFirstChild("Jump V2")
+local SitAnim  = game:GetObjects("rbxassetid://12452064144")[1]["R6 Animation Rig"].AnimSaves:FindFirstChild("SITTING")
+
+-- // Animation Paths \\ --
+local AnimPaths = {
+    Idle = IdleAnim,
+    Walk = WalkAnim,
+    Jump = JumpAnim,
+    Sit  = SitAnim
+}
+----------------------------------------------------
+
+-- // PLAYER Anim Table \\ --
+local PlayerAnims = {
+    Idle = { KFS = AnimPaths.Idle, IsPlaying = false },
+    Walk = { KFS = AnimPaths.Walk, IsPlaying = false },
+    Jump = { KFS = AnimPaths.Jump, IsPlaying = false },
+    Sit  = { KFS = AnimPaths.Sit,  IsPlaying = false },
+}
+----------------------------------------------------
+
+----------------------------------------------------
+
+-- // Play Animations \\ --
+local function playAnim(animName, looped)
+    if currentAnim == animName then return end
+    if getgenv().Animator6DStop then
+        getgenv().Animator6DStop()
+    end
+
+    local anim = PlayerAnims[animName]
+    if anim and anim.KFS then
+        for _, data in pairs(PlayerAnims) do
+            data.IsPlaying = false
+        end
+        anim.IsPlaying = true
+        currentAnim = animName
+        
+          getgenv().Animator6D(anim.KFS, 1, looped)
+    end
+end
+----------------------------------------------------
+
+-- // Detect Anims \\ --
+RunService.RenderStepped:Connect(function(deltaTime)
+	local moving = Humanoid.MoveDirection.Magnitude > 0
+	local jumping = Humanoid.FloorMaterial == Enum.Material.Air
+	local sitting = Humanoid.Sit or (Humanoid:GetState() == Enum.HumanoidStateType.Seated)
+
+	if IsDancing then return end
+
+	if sitting then
+		if not PlayerAnims.Sit.IsPlaying then
+			playAnim("Sit", true)
+		end
+		return
+	end
+
+	if jumping then
+		if not PlayerAnims.Jump.IsPlaying then
+			playAnim("Jump", false)
+		end
+		return
+	end
+
+	if moving then
+		if not PlayerAnims.Walk.IsPlaying then
+			playAnim("Walk", true)
+		end
+	else
+		if not PlayerAnims.Idle.IsPlaying then
+			playAnim("Idle", true)
 		end
 	end
 end)
---------------------------
+----------------------------------------------------
 
 ----- GLOBAL CACHE -------
 local EffectFolder = Character:FindFirstChild("EffectFolder")
@@ -143,12 +187,24 @@ local Music16 = IT("Sound", EffectFolder)
 Music16.Name = "Spooky Month"
 local Music17 = IT("Sound", EffectFolder)
 Music17.Name = "Boogie Down"
---------------------------
------ ANIMATOR 6D --------
-loadstring(game:HttpGet("https://raw.githubusercontent.com/gObl00x/Stuff/refs/heads/main/Animator6D.lua"))()
+local Music18 = IT("Sound", EffectFolder)
+Music18.Name = "Mio Honda Step"
+local Music19 = IT("Sound", EffectFolder)
+Music19.Name = "Fright Funk"
 --------------------------
 
-  --_/ STARTING \__--
+-- // PLAY EPIK SOUNDTRACK // --
+local theme = IT("Sound", SS)
+theme.Name = "THEME"
+theme.SoundId = getcustomasset("Epik Musics/Friday Theme.mp3")
+theme.Volume = 0.75
+theme.Looped = true
+theme:Play()
+--------------------------------
+
+--//==============================================================================================//--
+--||		THE FUN STARTS HERE 
+--\\===========================================================================================//--
 
 -- // Smug Tool Dance \\ --
 local tool1 = IT("Tool", Backpack)
@@ -161,6 +217,10 @@ end
 --
 tool1.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
     Humanoid.WalkSpeed = 10
        getgenv().Animator6D(6512463532, 1, true)
 -- Music
@@ -173,7 +233,9 @@ end)
 
 tool1.Unequipped:Connect(function()
 if Music1.Parent == Character and Music1.Playing then
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
     Humanoid.WalkSpeed = 16
        Music1:Stop()
        Music1.Parent = EffectFolder
@@ -193,6 +255,10 @@ end
 local CachedEffects = {}
 tool2.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
        getgenv().Animator6D(17147170140, 1, true)
 -- Aura
 local EffectModel = game:GetObjects("rbxassetid://17286931410")[1]
@@ -217,8 +283,10 @@ end
 end)
 
 tool2.Unequipped:Connect(function()
-    if Music2.Parent == Character and Music2.Playing then
+if Music2.Parent == Character and Music2.Playing then
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
        Music2:Stop()
        Music2.Parent = EffectFolder
     end
@@ -241,6 +309,10 @@ end
 --
 tool3.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
        getgenv().Animator6D(117971041844492, 1, true)
 -- Music
 Music3.Parent = Character
@@ -251,8 +323,10 @@ end
 end)
 
 tool3.Unequipped:Connect(function()
-    if Music3.Parent == Character and Music3.Playing then
+if Music3.Parent == Character and Music3.Playing then
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
        Music3:Stop()
        Music3.Parent = EffectFolder
     end
@@ -272,6 +346,10 @@ local KazotskyKick= game:GetObjects("rbxassetid://8903870018")[1].AnimSaves["Kaz
 --
 tool4.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
         Humanoid.WalkSpeed = 6
        getgenv().Animator6D(KazotskyKick, 1, true)
 -- Music
@@ -285,7 +363,9 @@ end)
 tool4.Unequipped:Connect(function()
 if Music4.Parent == Character and Music4.Playing then
 Humanoid.WalkSpeed = 16
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
        Music4:Stop()
        Music4.Parent = EffectFolder
     end
@@ -304,6 +384,10 @@ end
 --
 tool5.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
        getgenv().Animator6D(15710560047, 1, true)
 -- Music
 Music5.Parent = Character
@@ -315,7 +399,9 @@ end)
 
 tool5.Unequipped:Connect(function()
 if Music5.Parent == Character and Music5.Playing then
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
        Music5:Stop()
        Music5.Parent = EffectFolder
     end
@@ -334,6 +420,10 @@ end
 --
 tool6.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
        getgenv().Animator6D(80947480089411, 1, true)
 -- Music
 Music6.Parent = Character
@@ -345,7 +435,9 @@ end)
 
 tool6.Unequipped:Connect(function()
 if Music6.Parent == Character and Music6.Playing then
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
        Music6:Stop()
        Music6.Parent = EffectFolder
     end
@@ -364,6 +456,10 @@ end
 --
 tool7.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
        getgenv().Animator6D(3678753938, 1, true)
 -- Music
 Music7.Parent = Character
@@ -375,7 +471,9 @@ end)
 
 tool7.Unequipped:Connect(function()
 if Music7.Parent == Character and Music7.Playing then
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
        Music7:Stop()
        Music7.Parent = EffectFolder
     end
@@ -395,6 +493,10 @@ local Reanimated = game:GetObjects("rbxassetid://9382474754")[1].AnimSaves:FindF
 --
 tool8.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
        getgenv().Animator6D(Reanimated, 1, true)
 -- Music
 Music8.Parent = Character
@@ -406,7 +508,9 @@ end)
 
 tool8.Unequipped:Connect(function()
 if Music8.Parent == Character and Music8.Playing then
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
        Music8:Stop()
        Music8.Parent = EffectFolder
     end
@@ -425,6 +529,10 @@ end
 --
 tool9.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
        getgenv().Animator6D(13096880262, 1, true)
 -- Music
 Music9.Parent = Character
@@ -436,7 +544,9 @@ end)
 
 tool9.Unequipped:Connect(function()
 if Music9.Parent == Character and Music9.Playing then
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
        Music9:Stop()
        Music9.Parent = EffectFolder
     end
@@ -456,6 +566,10 @@ local Fresh = game:GetObjects("rbxassetid://93309532260574")[1].Emotes.AnimSaves
 --
 tool10.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
          Humanoid.WalkSpeed = 5
        getgenv().Animator6D(Fresh, 1, true)
 -- Music
@@ -469,7 +583,9 @@ end)
 tool10.Unequipped:Connect(function()
 if Music10.Parent == Character and Music10.Playing then
 Humanoid.WalkSpeed = 16
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
        Music10:Stop()
        Music10.Parent = EffectFolder
     end
@@ -489,6 +605,10 @@ local Sequencia = game:GetObjects("rbxassetid://93309532260574")[1].Emotes.AnimS
 --
 tool11.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
         Humanoid.WalkSpeed = 0
        getgenv().Animator6D(Sequencia, 1, true)
 -- Music
@@ -502,7 +622,9 @@ end)
 tool11.Unequipped:Connect(function()
 if Music11.Parent == Character and Music11.Playing then
 Humanoid.WalkSpeed = 16
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
        Music11:Stop()
        Music11.Parent = EffectFolder
     end
@@ -536,6 +658,10 @@ local Boombox = game:GetObjects("rbxassetid://93309532260574")[1].Emotes.AnimSav
 --
 tool12.Equipped:Connect(function()
     if Character and mesh.Parent == EffectFolder then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
         mesh.Parent = handle
         Humanoid.WalkSpeed = 0
        getgenv().Animator6D(Boombox, 1, true)
@@ -550,7 +676,9 @@ end)
 tool12.Unequipped:Connect(function()
 Humanoid.WalkSpeed = 16
 if Music12.Parent == Character and Music12.Playing then
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
     Music12:Stop()
     Music12.Parent = EffectFolder
     end
@@ -573,6 +701,10 @@ local TakeTheL= game:GetObjects("rbxassetid://8903870018")[1].AnimSaves["Take Th
 --
 tool13.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
         Humanoid.WalkSpeed = 6.5
        getgenv().Animator6D(TakeTheL, 1, true)
 -- Music
@@ -586,7 +718,9 @@ end)
 tool13.Unequipped:Connect(function()
 if Music13.Parent == Character and Music13.Playing then
 Humanoid.WalkSpeed = 16
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
        Music13:Stop()
        Music13.Parent = EffectFolder
     end
@@ -606,6 +740,10 @@ local ItsASecret = game:GetObjects("rbxassetid://17767173972")[1].AnimSaves:Find
 --
 tool14.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
         Humanoid.WalkSpeed = 4
        getgenv().Animator6D(ItsASecret, 1, true)
 -- Music
@@ -619,7 +757,9 @@ end)
 tool14.Unequipped:Connect(function()
 if Music14.Parent == Character and Music14.Playing then
 Humanoid.WalkSpeed = 16
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
     Music14:Stop()
     Music14.Parent = EffectFolder
 end
@@ -639,6 +779,10 @@ local caramell = game:GetObjects("rbxassetid://6929983041")[1].AnimSaves:FindFir
 --
 tool15.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
         Humanoid.WalkSpeed = 2.5
        getgenv().Animator6D(caramell, 1, true)
 -- Music
@@ -652,7 +796,9 @@ end)
 tool15.Unequipped:Connect(function()
 if Music15.Parent == Character and Music15.Playing then
 Humanoid.WalkSpeed = 16
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
     Music15:Stop()
     Music15.Parent = EffectFolder
 end
@@ -672,6 +818,10 @@ local Spooky = game:GetObjects("rbxassetid://11512762330")[1].AnimSaves:FindFirs
 --
 tool16.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
         Humanoid.WalkSpeed = 2.5
        getgenv().Animator6D(Spooky, 1, true)
 -- Music
@@ -685,7 +835,9 @@ end)
 tool16.Unequipped:Connect(function()
 if Music16.Parent == Character and Music16.Playing then
 Humanoid.WalkSpeed = 16
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
     Music16:Stop()
     Music16.Parent = EffectFolder
 end
@@ -701,6 +853,10 @@ local Boogie = game:GetObjects("rbxassetid://16621824519")[1].AnimSaves:FindFirs
 --
 tool17.Equipped:Connect(function()
     if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
         Humanoid.WalkSpeed = 1.5
        getgenv().Animator6D(Boogie, 1.1, true)
 Music17.Parent = Character
@@ -714,9 +870,100 @@ end)
 tool17.Unequipped:Connect(function()
 if Music17.Parent == Character and Music17.Playing then
 Humanoid.WalkSpeed = 16
+    IsDancing = false
     getgenv().Animator6DStop()
+    theme:Play()
     Music17:Stop()
     Music17.Parent = EffectFolder
 end
     print("Dance 17 and music stopped")
+end)
+
+
+-- // Mio Honda Step Tool Dance \\ --
+local tool18 = IT("Tool", Backpack)
+tool18.Name = "Mio Honda Step"
+tool18.RequiresHandle = false
+--
+if not isfile("Epik Musics/Step.mp3") then
+       writefile("Epik Musics/Step.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Step.mp3"))
+end
+local Step = game:GetObjects("rbxassetid://6925949000")[1].AnimSaves:FindFirstChild("Imported Animation Clip")
+--
+tool18.Equipped:Connect(function()
+    if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
+    Humanoid.WalkSpeed = 1.8
+       getgenv().Animator6D(Step, 1, true)
+-- Music
+Music18.Parent = Character
+Music18.SoundId = getcustomasset("Epik Musics/Step.mp3")
+Music18.Looped = true
+Music18:Play()
+end
+end)
+
+tool18.Unequipped:Connect(function()
+if Music18.Parent == Character and Music18.Playing then
+Humanoid.WalkSpeed = 16
+    IsDancing = false
+    getgenv().Animator6DStop()
+    theme:Play()
+    Music18:Stop()
+    Music18.Parent = EffectFolder
+end
+    print("Dance 18 and music stopped")
+end)
+
+
+-- // Fright Funk Tool Dance \\ --
+local tool19 = IT("Tool", Backpack)
+tool19.Name = "Fright Funk"
+tool19.RequiresHandle = false
+--
+if not isfile("Epik Musics/frightfunk.mp3") then
+       writefile("Epik Musics/frightfunk.mp3", game:HttpGet("https://github.com/Nitro-GT/music/raw/refs/heads/main/frightfunk.mp3"))
+end
+local frightfunk = game:GetObjects("rbxassetid://5337215274")[1].AnimSaves:FindFirstChild("Power Dance")
+--
+tool19.Equipped:Connect(function()
+    if Character then
+    IsDancing = true
+    getgenv().jumping = nil
+    getgenv().moving = nil
+    theme:Stop()
+    Humanoid.WalkSpeed = 10
+       getgenv().Animator6D(frightfunk, 1.2, true)
+-- Music
+Music19.Parent = Character
+Music19.SoundId = getcustomasset("Epik Musics/frightfunk.mp3")
+Music19.Looped = true
+Music19:Play()
+end
+end)
+
+tool19.Unequipped:Connect(function()
+if Music19.Parent == Character and Music19.Playing then
+Humanoid.WalkSpeed = 16
+    IsDancing = false
+    getgenv().Animator6DStop()
+    theme:Play()
+    Music19:Stop()
+    Music19.Parent = EffectFolder
+end
+    print("Dance 19 and music stopped")
+end)
+
+-- Avoid duplication of music
+Humanoid.Died:Connect(function()
+local Theme = SS:FindFirstChild("THEME")
+local Music = Character:FindFirstChildOfClass("Sound") or EffectFolder:FindFirstChildOfClass("Sound")
+   if Theme and Music then
+      Theme.Parent = Character
+      Music:Stop()
+      Music:Destroy()
+end
 end)
