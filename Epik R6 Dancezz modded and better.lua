@@ -1125,7 +1125,7 @@ if not isfile("Prince Of Egypt.mp3") then
        writefile("Prince Of Egypt.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Prince%20Of%20Egypt.mp3"))
 end
 --
-local animthingy5 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("Eqypt R6")
+local animthingy5 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("Egypt R6")
 
 tool19.Equipped:Connect(function()
     if Character then
