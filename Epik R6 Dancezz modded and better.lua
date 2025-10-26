@@ -1981,7 +1981,7 @@ if not isfile("Sinful.mp3") then
 end
 --
 
-local animthingy27 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("the 2")
+local animthingy27 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("new 2")
 
 tool19.Equipped:Connect(function()
     if Character then
