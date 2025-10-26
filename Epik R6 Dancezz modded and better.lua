@@ -14,7 +14,7 @@ if not isfile("Epik Musics/Friday Theme.mp3") then
        writefile("Epik Musics/Friday Theme.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Friday%20Theme.mp3"))
 end
 --//==============================================================================================//--
---||		EPIK R6 DANCEZZZ CREATED BY gObl00x // NEW ANIMATOR6D // added old dances and some more by e god
+--||		EPIK R6 DANCEZZZ CREATED BY gObl00x // NEW ANIMATOR6D // added some more dances - e god
 --|| Ya sorry, I'll not make all these animations or the ones from the previous version to CFrames
 --\\===========================================================================================//--
 
@@ -966,14 +966,16 @@ if not isfile("The Hero.mp3") then
        writefile("The Hero.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/The%20Hero.mp3"))
 end
 --
+local animthingy1 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("the hero")
+
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(133160365635320, 1, true)
+    Humanoid.WalkSpeed = 13
+       getgenv().Animator6D(animthingy1, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("The Hero.mp3")
@@ -1002,6 +1004,9 @@ tool19.RequiresHandle = false
 if not isfile("Two.mp3") then
        writefile("Two.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Two.mp3"))
 end
+
+local animthingy2 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("Two")
+
 --
 tool19.Equipped:Connect(function()
     if Character then
@@ -1010,84 +1015,10 @@ tool19.Equipped:Connect(function()
     getgenv().moving = nil
     theme:Stop()
     Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(137845929482571, 1, true)
+       getgenv().Animator6D(animthingy2, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Two.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // The flop Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "The Flop"
-tool19.RequiresHandle = false
---
-if not isfile("The Flop.mp3") then
-       writefile("The Flop.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/The%20Flop.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(84447598378239, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("The Flop.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Club penguin Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Club Penguin"
-tool19.RequiresHandle = false
---
-if not isfile("Club Penguin.mp3") then
-       writefile("Club Penguin.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Club%20Penguin.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(89761302048916, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Club Penguin.mp3")
 Music19.Looped = true
 Music19:Play()
 end
@@ -1114,239 +1045,20 @@ if not isfile("Breakdance.mp3") then
        writefile("Breakdance.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Breakdance.mp3"))
 end
 --
+
+local animthingy3 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("KeyframeSequence")
+
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(132886479585903, 1, true)
+    Humanoid.WalkSpeed = 13
+       getgenv().Animator6D(animthingy3, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Breakdance.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Insanity Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Insanity"
-tool19.RequiresHandle = false
---
-if not isfile("Insanity.mp3") then
-       writefile("Insanity.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Insanity.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(139483347792972, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Insanity.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Step Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Step"
-tool19.RequiresHandle = false
---
-if not isfile("Step.mp3") then
-       writefile("Step.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Step.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(124074233795203, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Step.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Poke dance Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Poke Dance"
-tool19.RequiresHandle = false
---
-if not isfile("Poke Dance.mp3") then
-       writefile("Poke Dance.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Poke%20Dance.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(18986687692, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Poke Dance.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Chinese dance Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Chinese Dance"
-tool19.RequiresHandle = false
---
-if not isfile("Chinese Dance.mp3") then
-       writefile("Chinese Dance.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Chinese%20Dance.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(124210157097622, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Chinese Dance.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Doodle Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Doodle"
-tool19.RequiresHandle = false
---
-if not isfile("Doodle.mp3") then
-       writefile("Doodle.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Doodle.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(137721173051346, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Doodle.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Shinji chair Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Shinji Chair"
-tool19.RequiresHandle = false
---
-if not isfile("Shinji Meme.mp3") then
-       writefile("Shinji Meme.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Shinji%20Meme.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(130485792890829, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Shinji Meme.mp3")
 Music19.Looped = true
 Music19:Play()
 end
@@ -1373,91 +1085,20 @@ if not isfile("Rakuten Lemonade.mp3") then
        writefile("Rakuten Lemonade.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Rakuten%20Lemonade.mp3"))
 end
 --
+
+local animthingy4 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("rakuten")
+
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(18985726113, 1, true)
+    Humanoid.WalkSpeed = 13
+       getgenv().Animator6D(animthingy4, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Rakuten Lemonade.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Lonely lonely Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Lonely Lonely"
-tool19.RequiresHandle = false
---
-if not isfile("Lonely Lonely.mp3") then
-       writefile("Lonely Lonely.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Lonely%20Lonely.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(135780829162802, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Lonely Lonely.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Shuba duck Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Shuba Duck"
-tool19.RequiresHandle = false
---
-if not isfile("Hey Ya.mp3") then
-       writefile("Hey Ya.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Hey%20Ya.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(13357063395, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Hey Ya.mp3")
 Music19.Looped = true
 Music19:Play()
 end
@@ -1484,54 +1125,19 @@ if not isfile("Prince Of Egypt.mp3") then
        writefile("Prince Of Egypt.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Prince%20Of%20Egypt.mp3"))
 end
 --
+local animthingy5 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("Eqypt R6")
+
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(100136360352723, 1, true)
+    Humanoid.WalkSpeed = 18
+       getgenv().Animator6D(animthingy5, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Prince Of Egypt.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Shoo whop Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Shoo Whop"
-tool19.RequiresHandle = false
---
-if not isfile("Shoo Whop.mp3") then
-       writefile("Shoo Whop.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Shoo%20Whop.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(121535445943256, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Shoo Whop.mp3")
 Music19.Looped = true
 Music19:Play()
 end
@@ -1558,14 +1164,15 @@ if not isfile("PopPiPo.mp3") then
        writefile("PoPiPo.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/PoPiPo.mp3"))
 end
 --
+local animthingy6 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("PoPiPo Short")
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(78991327797272, 1, true)
+    Humanoid.WalkSpeed = 16
+       getgenv().Animator6D(animthingy6, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("PoPiPo.mp3")
@@ -1595,54 +1202,19 @@ if not isfile("Monoko.mp3") then
        writefile("Monoko.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Monoko.mp3"))
 end
 --
+
+local animthingy7 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("monoko working")
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(139889845987864, 1, true)
+    Humanoid.WalkSpeed = 16
+       getgenv().Animator6D(animthingy7, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Monoko.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Lagtrain Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Lagtrain"
-tool19.RequiresHandle = false
---
-if not isfile("Lagtrain.mp3") then
-       writefile("Lagtrain.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Lagtrain.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(131559207454945, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Lagtrain.mp3")
 Music19.Looped = true
 Music19:Play()
 end
@@ -1669,14 +1241,16 @@ if not isfile("In My Head.mp3") then
        writefile("In My Head.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/In%20My%20Head.mp3"))
 end
 --
+local animthingy8 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("IN MY HEAD! - SUPXR")
+
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(114160464579438, 1, true)
+    Humanoid.WalkSpeed = 13
+       getgenv().Animator6D(animthingy8, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("In My Head.mp3")
@@ -1702,6 +1276,9 @@ local tool19 = IT("Tool", Backpack)
 tool19.Name = "Lemon Melon Cookie"
 tool19.RequiresHandle = false
 --
+
+local animthingy9 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("Lemon Melon Cookie")
+
 if not isfile("LMC.mp3") then
        writefile("LMC.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/LMC.mp3"))
 end
@@ -1712,381 +1289,11 @@ tool19.Equipped:Connect(function()
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(120262284704633, 1, true)
+    Humanoid.WalkSpeed = 16
+       getgenv().Animator6D(animthingy9, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("LMC.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Get Down Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Get Down"
-tool19.RequiresHandle = false
---
-if not isfile("Get Down.mp3") then
-       writefile("Get Down.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Get%20Down.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(98916367562022, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Get Down.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Dia delicia Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Dia Delicia"
-tool19.RequiresHandle = false
---
-if not isfile("Dia Delicia.mp3") then
-       writefile("Dia Delicia.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Dia%20Delicia.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(80641587562132, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Dia Delicia.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Epik Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Epik"
-tool19.RequiresHandle = false
---
-if not isfile("Epik.mp3") then
-       writefile("Epik.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Epik.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(135424282094138, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Epik.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Shigure Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Shigure"
-tool19.RequiresHandle = false
---
-if not isfile("Loli Dance.mp3") then -- why is it named this bro
-       writefile("Loli Dance.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Loli%20Dance.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(14887006269, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Loli Dance.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // I WANNA RUN AWAY Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "I WANNA RUN AWAY"
-tool19.RequiresHandle = false
---
-if not isfile("IWRA.mp3") then
-       writefile("IWRA.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/IWRA.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(131562546189485, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("IWRA.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Whatsapp Meme Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "WhatsApp Meme"
-tool19.RequiresHandle = false
---
-if not isfile("WhatsApp Meme.mp3") then
-       writefile("WhatsApp Meme.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/WhatsApp%20Meme.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(131539514978219, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("WhatsApp Meme.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Goofy Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Goofy"
-tool19.RequiresHandle = false
---
-if not isfile("Goofy Song.mp3") then
-       writefile("Goofy Song.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Goofy%20Song.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(75148929064618, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Goofy Song.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Who can it be now Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Who Can It Be Now?"
-tool19.RequiresHandle = false
---
-if not isfile("WCIBN.mp3") then
-       writefile("WCIBN.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/WCIBN.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(16240038168, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("WCIBN.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Pretty Princess Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Pretty Princess"
-tool19.RequiresHandle = false
---
-if not isfile("Pretty Princess Theme.mp3") then
-       writefile("Pretty Princess Theme.mp3", game:HttpGet("https://github.com/gObl00x/Epik-Musics/raw/refs/heads/main/Pretty%20Princess%20Theme.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(118452043589079, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Pretty Princess Theme.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // I miss the quiet Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "I Miss The Quiet"
-tool19.RequiresHandle = false
---
-if not isfile("IMissTheQuietYesIdooo.mp3") then
-       writefile("IMissTheQuietYesIdooo.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/IMissTheQuietYesIdooo.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(100986631322204, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("IMissTheQuietYesIdooo.mp3")
 Music19.Looped = true
 Music19:Play()
 end
@@ -2113,91 +1320,18 @@ if not isfile("Brickbattler.mp3") then
        writefile("Brickbattler.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Brickbattler.mp3"))
 end
 --
+local animthingy10 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("Brickbattler")
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(138531569676600, 1, true)
+    Humanoid.WalkSpeed = 13
+       getgenv().Animator6D(animthingy10, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Brickbattler.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Cupcakes Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Cupcakes"
-tool19.RequiresHandle = false
---
-if not isfile("Cupcakes HD.mp3") then
-       writefile("Cupcakes HD.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Cupcakes%20HD.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(126397719425664, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Cupcake HD.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // 2Two2 Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "2Two2"
-tool19.RequiresHandle = false
---
-if not isfile("2Two2.mp3") then
-       writefile("2Two2.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/2Two2.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(89348834081653, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("2Two2.mp3")
 Music19.Looped = true
 Music19:Play()
 end
@@ -2224,14 +1358,16 @@ if not isfile("AronaDance.mp3") then
        writefile("AronaDance.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/AronaDance.mp3"))
 end
 --
+
+local animthingy11 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("The One Arona Dance")
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(113953995772094, 1, true)
+    Humanoid.WalkSpeed = 16
+       getgenv().Animator6D(animthingy11, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("AronaDance.mp3")
@@ -2252,23 +1388,25 @@ end
     print("Dance 19 and music stopped")
 end)
 
--- // Asseumptions Tool Dance \\ --
+-- // unnamed dance 1 Tool Dance \\ --
 local tool19 = IT("Tool", Backpack)
-tool19.Name = "Assumptions"
+tool19.Name = "IDK unnamed dance"
 tool19.RequiresHandle = false
 --
 if not isfile("Assumptions.mp3") then
-       writefile("Assumptions.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Assumptions.mp3"))
+       writefile("Assumptions.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Assumptions.mp3")) -- taken a random guess on unnamed ones
 end
 --
+
+local animthingy12 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("KeyframeSequence_1")
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(75148929064618, 1, true)
+    Humanoid.WalkSpeed = 16
+       getgenv().Animator6D(animthingy12, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Assumptions.mp3")
@@ -2289,100 +1427,28 @@ end
     print("Dance 19 and music stopped")
 end)
 
--- // BIGSHOT Tool Dance \\ --
+-- // unnamed dance 2 Tool Dance \\ --
 local tool19 = IT("Tool", Backpack)
-tool19.Name = "BIGSHOT"
+tool19.Name = "idk dance name"
 tool19.RequiresHandle = false
 --
 if not isfile("BIGSHOT.mp3") then
-       writefile("BIGSHOT.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/BIGSHOT.mp3"))
+       writefile("BIGSHOT.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/BIGSHOT.mp3")) -- taking random guess yep
 end
 --
+local animthingy13 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("number")
+
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(8071025449, 1, true)
+    Humanoid.WalkSpeed = 16
+       getgenv().Animator6D(animthingy13, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("BIGSHOT.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Spamtom dance Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Spamtom Dance"
-tool19.RequiresHandle = false
---
-if not isfile("BIGSHOT.mp3") then
-       writefile("BIGSHOT.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/BIGSHOT.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(89348834081653, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("BIGSHOT.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Bluudud Alarm Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Bluudud Alarm"
-tool19.RequiresHandle = false
---
-if not isfile("Bluudud Alarm.mp3") then
-       writefile("Bluudud Alarm.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Bluudud%20Alarm.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(97789180606119, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Bluudud Alarm.mp3")
 Music19.Looped = true
 Music19:Play()
 end
@@ -2409,14 +1475,17 @@ if not isfile("C14.mp3") then
        writefile("C14.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/C14.mp3"))
 end
 --
+
+local animthingy14 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("ClassC14")
+
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(118452043589079, 1, true)
+    Humanoid.WalkSpeed = 16
+       getgenv().Animator6D(animthingy14, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("C14.mp3")
@@ -2437,23 +1506,25 @@ end
     print("Dance 19 and music stopped")
 end)
 
--- // Cafeteria Tool Dance \\ --
+-- // unnamed emote 3 Tool Dance \\ --
 local tool19 = IT("Tool", Backpack)
-tool19.Name = "Cafeteria"
+tool19.Name = "idk this dance name guys sorry"
 tool19.RequiresHandle = false
 --
 if not isfile("Cafeteria.mp3") then
-       writefile("Cafeteria.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Cafeteria.mp3"))
+       writefile("Cafeteria.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Cafeteria.mp3")) -- taking random guess
 end
 --
+
+local animthingy15 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("yy")
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(111079857314277, 1, true)
+    Humanoid.WalkSpeed = 16
+       getgenv().Animator6D(animthingy15, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Cafeteria.mp3")
@@ -2483,91 +1554,19 @@ if not isfile("Calm.mp3") then
        writefile("Calm.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Calm.mp3"))
 end
 --
+local animthingy16 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("stunidle")
+
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(134311400337263, 1, true)
+    Humanoid.WalkSpeed = 3
+       getgenv().Animator6D(animthingy16, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Calm.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Dance if you are peak Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Dance if You Are Peak"
-tool19.RequiresHandle = false
---
-if not isfile("Dance is you are peak (Headlock).mp3") then
-       writefile("Dance is you are peak (Headlock).mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Dance%20is%20you%20are%20peak%20(Headlock).mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(135424282094138, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Dance is you are peak (Headlock).mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Endoskeleton Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Endoskeleton"
-tool19.RequiresHandle = false
---
-if not isfile("Endoskeleton.mp3") then
-       writefile("Endoskeleton.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Endoskeleton.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(99015977795000, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Endoskeleton.mp3")
 Music19.Looped = true
 Music19:Play()
 end
@@ -2594,14 +1593,16 @@ if not isfile("Epical.mp3") then
        writefile("Epical.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Epical.mp3"))
 end
 --
+
+local animthingy17 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("Epical")
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(135424282094138, 1, true)
+    Humanoid.WalkSpeed = 16
+       getgenv().Animator6D(animthingy17, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Epical.mp3")
@@ -2622,60 +1623,24 @@ end
     print("Dance 19 and music stopped")
 end)
 
--- // Get Down Tool Dance \\ --
+-- // unnamed dance idk iforgot number Tool Dance \\ --
 local tool19 = IT("Tool", Backpack)
-tool19.Name = "Get Down!"
-tool19.RequiresHandle = false
---
-if not isfile("GET DOWN!2.mp3") then
-       writefile("GET DOWN!2.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/GET%20DOWN!2.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(98916367562022, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("GET DOWB!2.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Internet Angel Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Internet Angel"
+tool19.Name = "unnamed dance idk"
 tool19.RequiresHandle = false
 --
 if not isfile("INTERNET ANGEL.mp3") then
-       writefile("INTERNET ANGEL.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/INTERNET%20ANGEL.mp3"))
+       writefile("INTERNET ANGEL.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/INTERNET%20ANGEL.mp3")) -- random guess song thing
 end
 --
+local animthingy18 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("Neo Idle")
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(18986591475, 1, true)
+    Humanoid.WalkSpeed = 3
+       getgenv().Animator6D(animthingy18, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("INTERNET ANGEL.mp3")
@@ -2705,6 +1670,7 @@ if not isfile("Inernet Yamero.mp3") then
        writefile("Internet Yamero.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/InternetYamero.mp3"))
 end
 --
+local animthingy19 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("internet yamero")
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
@@ -2712,7 +1678,7 @@ tool19.Equipped:Connect(function()
     getgenv().moving = nil
     theme:Stop()
     Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(99905571448278, 1, true)
+       getgenv().Animator6D(animthingy19, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Internet Yamero.mp3")
@@ -2733,14 +1699,16 @@ end
     print("Dance 19 and music stopped")
 end)
 
--- // Iron Lung Tool Dance \\ --
+-- // unnamed dance number something Tool Dance \\ --
 local tool19 = IT("Tool", Backpack)
-tool19.Name = "Iron Lung"
+tool19.Name = "some dance idk"
 tool19.RequiresHandle = false
 --
 if not isfile("Ironlung.mp3") then
-       writefile("Ironlung.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Ironlung.mp3"))
+       writefile("Ironlung.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Ironlung.mp3")) -- random guess
 end
+
+local animthingy20 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("R15ToR6ConvertedAnimation")
 --
 tool19.Equipped:Connect(function()
     if Character then
@@ -2748,122 +1716,11 @@ tool19.Equipped:Connect(function()
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(77298361270388, 1, true)
+    Humanoid.WalkSpeed = 16
+       getgenv().Animator6D(animthingy20, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Ironlung.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Tenna Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Tenna"
-tool19.RequiresHandle = false
---
-if not isfile("ItsTVTIME!.mp3") then
-       writefile("ItsTVTIME!.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/ItsTVTIME!.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(97351316825183, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("ItsTVTIME!.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Konton Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Konton"
-tool19.RequiresHandle = false
---
-if not isfile("Konton.mp3") then
-       writefile("Konton.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Konton.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(83719399570827, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Konton.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Lemon Demon Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Lemon Demon"
-tool19.RequiresHandle = false
---
-if not isfile("Lemon Demon - Modify.mp3") then
-       writefile("Lemon Demon - Modify.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Lemon%20Demon%20-%20Modify.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(101484588555482, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Lemon Demon - Modify.mp3")
 Music19.Looped = true
 Music19:Play()
 end
@@ -2889,6 +1746,9 @@ tool19.RequiresHandle = false
 if not isfile("LiarDance.mp3") then
        writefile("LiarDance.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/LiarDance.mp3"))
 end
+
+local animthingy21 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("LIARDANCER4")
+
 --
 tool19.Equipped:Connect(function()
     if Character then
@@ -2896,8 +1756,8 @@ tool19.Equipped:Connect(function()
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(129584064125006, 1, true)
+    Humanoid.WalkSpeed = 6
+       getgenv().Animator6D(animthingy21, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("LiarDance.mp3")
@@ -2927,14 +1787,15 @@ if not isfile("Limbo.mp3") then
        writefile("Limbo.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Limbo.mp3"))
 end
 --
+local animthingy22 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("limbo")
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(17308598027, 1, true)
+    Humanoid.WalkSpeed = 13
+       getgenv().Animator6D(animthingy22, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Limbo.mp3")
@@ -2963,6 +1824,8 @@ tool19.RequiresHandle = false
 if not isfile("MID SHUCKS SPANISH.mp3") then
        writefile("MID SHUCKS SPANISH.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/MID%20SHUCKS%20SPANISH.mp3"))
 end
+local animthingy23 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("MainCutsene(Serve me on a silver platter)")
+
 --
 tool19.Equipped:Connect(function()
     if Character then
@@ -2970,8 +1833,8 @@ tool19.Equipped:Connect(function()
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(129311159923059, 1, true)
+    Humanoid.WalkSpeed = 6
+       getgenv().Animator6D(animthingy23, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("MID SHUCKS SPANISH.mp3")
@@ -2992,51 +1855,15 @@ end
     print("Dance 19 and music stopped")
 end)
 
--- // Mesmerizer Tool Dance \\ --
+-- // unnamed again idk number Tool Dance \\ --
 local tool19 = IT("Tool", Backpack)
-tool19.Name = "Mesmerizer"
-tool19.RequiresHandle = false
---
-if not isfile("Mesmerizer.mp3") then
-       writefile("Mesmerizer.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Mesmerizer.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(107578737342278, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("Mesmerizer.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Out of touch Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Out of touch"
+tool19.Name = "unnamed again idk"
 tool19.RequiresHandle = false
 --
 if not isfile("Out of touch.mp3") then
-       writefile("Out of touch.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Out%20of%20touch.mp3"))
+       writefile("Out of touch.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Out%20of%20touch.mp3")) -- guessing time again
 end
+local animthingy24 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("fnf thing")
 --
 tool19.Equipped:Connect(function()
     if Character then
@@ -3044,48 +1871,11 @@ tool19.Equipped:Connect(function()
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(135867676375598, 1, true)
+    Humanoid.WalkSpeed = 6
+       getgenv().Animator6D(animthingy24, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Out of touch.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // RUNAWAY Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "RUN AWAY"
-tool19.RequiresHandle = false
---
-if not isfile("RUNAWAY.mp3") then
-       writefile("RUNAWAY.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/RUNAWAY.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(119147810948063, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("RUNAWAY.mp3")
 Music19.Looped = true
 Music19:Play()
 end
@@ -3112,14 +1902,15 @@ if not isfile("Shucks.mp3") then
        writefile("Shucks.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Shucks.mp3"))
 end
 --
+local animthingy25 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("aw shucks r6")
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(74238051754912, 1, true)
+    Humanoid.WalkSpeed = 3
+       getgenv().Animator6D(animthingy25, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Shucks.mp3")
@@ -3148,6 +1939,9 @@ tool19.RequiresHandle = false
 if not isfile("Shinji's and juns Final battle Song.mp3") then
        writefile("Shinji's and juns Final battle Song.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Shinji's%20and%20juns%20Final%20battle%20Song.mp3"))
 end
+
+local animthingy26 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("iDK anymore")
+
 --
 tool19.Equipped:Connect(function()
     if Character then
@@ -3155,8 +1949,8 @@ tool19.Equipped:Connect(function()
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(108034281000187, 1, true)
+    Humanoid.WalkSpeed = 0
+       getgenv().Animator6D(animthingy26, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Shinji's and juns Final battle Song.mp3")
@@ -3177,23 +1971,26 @@ end
     print("Dance 19 and music stopped")
 end)
 
--- // Break core Tool Dance \\ --
+-- // unnamed thingy again bro Tool Dance \\ --
 local tool19 = IT("Tool", Backpack)
-tool19.Name = "Let me break down for you mark (Sinful)"
+tool19.Name = "unnamed dance bro idk"
 tool19.RequiresHandle = false
 --
 if not isfile("Sinful.mp3") then
-       writefile("Sinful.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Sinful.mp3"))
+       writefile("Sinful.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Sinful.mp3")) -- guessing time again wow bro
 end
 --
+
+local animthingy27 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("the 2")
+
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(132886479585903, 1, true)
+    Humanoid.WalkSpeed = 20
+       getgenv().Animator6D(animthingy27, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Sinful.mp3")
@@ -3214,15 +2011,17 @@ end
     print("Dance 19 and music stopped")
 end)
 
--- // Silly billy Tool Dance \\ --
+-- // unnamed omg w2ow again Tool Dance \\ --
 local tool19 = IT("Tool", Backpack)
-tool19.Name = "Silly Billy"
+tool19.Name = "unnamed wow dance wow"
 tool19.RequiresHandle = false
 --
 if not isfile("SillyBilly.mp3") then
-       writefile("SillyBilly.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/SillyBilly.mp3"))
+       writefile("SillyBilly.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/SillyBilly.mp3")) -- guess guess guess ahahahahaha
 end
 --
+
+local animthingy28 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("Blue Shirt")
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
@@ -3230,7 +2029,7 @@ tool19.Equipped:Connect(function()
     getgenv().moving = nil
     theme:Stop()
     Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(107464355830477, 1, true)
+       getgenv().Animator6D(animthingy28, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("SillyBilly.mp3")
@@ -3260,14 +2059,15 @@ if not isfile("Static2.mp3") then
        writefile("Static2.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Static2.mp3"))
 end
 --
+local animthingy29 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("Imported Animation Clip")
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(124415802608501, 1, true)
+    Humanoid.WalkSpeed = 13
+       getgenv().Animator6D(animthingy29, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Static2.mp3")
@@ -3296,6 +2096,7 @@ tool19.RequiresHandle = false
 if not isfile("Subturefuge.mp3") then
        writefile("Subturefuge.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Subturefuge.mp3"))
 end
+local animthingy30 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("sub")
 --
 tool19.Equipped:Connect(function()
     if Character then
@@ -3303,344 +2104,11 @@ tool19.Equipped:Connect(function()
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(87482480949358, 1, true)
+    Humanoid.WalkSpeed = 20
+       getgenv().Animator6D(animthingy30, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Subturefuge.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Muffin Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Die die die! Its muffin time!"
-tool19.RequiresHandle = false
---
-if not isfile("THEMUFFINSONG.mp3") then
-        writefile("THEMUFFINSONG.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/THEMUFFINSONG.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(70924317602904, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("THEMUFFINSONG.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // TWERKNATION28-NUMBER Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "TWERKNATION28-NUMBER" -- dont blame me blame the other guy who made the modded for the old version
-tool19.RequiresHandle = false
---
-if not isfile("TWERKNATION28-NUMBER.mp3") then
-       writefile("TWERKNATION28-NUMBER.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/TWERKNATION28-NUMBER.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(131539514978219, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("TWERKNATION28-NUMBER.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Twiddlefinger Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Twiddlefinger"
-tool19.RequiresHandle = false
---
-if not isfile("TWIDDLEFINGER.mp3.mp3") then
-       writefile("TWIDDLEFINGER.mp3.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/TWIDDLEFINGER.mp3.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(18376750786, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("TWIDDLEFINGER.mp3.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Tick tock Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Tick tock!"
-tool19.RequiresHandle = false
---
-if not isfile("TickTockEmote.mp3") then
-       writefile("TickTockEmote.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/TickTockEmote.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(74187447524398, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("TickTockEmote.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Teto Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Teto"
-tool19.RequiresHandle = false
---
-if not isfile("おちゃめ機能.mp3") then
-       writefile("おちゃめ機能.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/おちゃめ機能.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(95648759792903, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("おちゃめ機能.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Chronoshift Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Chronoshift"
-tool19.RequiresHandle = false
---
-if not isfile("chronoshift.mp3") then
-       writefile("chronoshift.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/chronoshift.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(136302258505787, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("chronoshift.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Noli Intro Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Noli Intro"
-tool19.RequiresHandle = false
---
-if not isfile("NOLI.mp3") then
-       writefile("NOLI.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/NOLI.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(84987078674309, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("NOLI.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Noli Outro Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Noli Outro"
-tool19.RequiresHandle = false
---
-if not isfile("NOLIOutro.mp3") then
-       writefile("NOLIOutro.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/NOLIOutro.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(134750797885169, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("NOLIOutro.mp3")
-Music19.Looped = true
-Music19:Play()
-end
-end)
-
-tool19.Unequipped:Connect(function()
-if Music19.Parent == Character and Music19.Playing then
-Humanoid.WalkSpeed = 16
-    IsDancing = false
-    getgenv().Animator6DStop()
-    theme:Play()
-    Music19:Stop()
-    Music19.Parent = EffectFolder
-end
-    print("Dance 19 and music stopped")
-end)
-
--- // Noli Stunned Tool Dance \\ --
-local tool19 = IT("Tool", Backpack)
-tool19.Name = "Noli Stun Pose"
-tool19.RequiresHandle = false
---
-if not isfile("VOIDSOUND.mp3") then
-        writefile("VOIDSOUND.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/VOIDSOUND.mp3"))
-end
---
-tool19.Equipped:Connect(function()
-    if Character then
-    IsDancing = true
-    getgenv().jumping = nil
-    getgenv().moving = nil
-    theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(137680069002162, 1, true)
--- Music
-Music19.Parent = Character
-Music19.SoundId = getcustomasset("VOIDSOUND.mp3")
 Music19.Looped = true
 Music19:Play()
 end
@@ -3667,14 +2135,16 @@ if not isfile("SAXAPHONE.mp3") then
        writefile("SAXAPHONE.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/SAXAPHONE.mp3"))
 end
 --
+local animthingy31 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("Automatic Save")
+
 tool19.Equipped:Connect(function()
     if Character then
     IsDancing = true
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(76640626326290, 1, true)
+    Humanoid.WalkSpeed = 6
+       getgenv().Animator6D(animthingy31, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("SAXAPHONE.mp3")
@@ -3703,6 +2173,7 @@ tool19.RequiresHandle = false
 if not isfile("Eggroll.mp3") then
        writefile("Eggroll.mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/Eggroll.mp3"))
 end
+local animthingy32 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("Eggrolled")
 --
 tool19.Equipped:Connect(function()
     if Character then
@@ -3710,8 +2181,8 @@ tool19.Equipped:Connect(function()
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(108580088290625, 1, true)
+    Humanoid.WalkSpeed = 18
+       getgenv().Animator6D(animthingy32, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("Eggroll.mp3")
@@ -3734,12 +2205,14 @@ end)
 
 -- // So much Tool Dance \\ --
 local tool19 = IT("Tool", Backpack)
-tool19.Name = "So much (idk name)"
+tool19.Name = "So much more i think"
 tool19.RequiresHandle = false
 --
 if not isfile("anybodycanfindlove(except you.).mp3") then
        writefile("anybodycanfindlove(except you.).mp3", game:HttpGet("https://github.com/EpicFire8/Music/raw/refs/heads/main/anybodycanfindlove(except you.).mp3"))
 end
+local animthingy33 = game:GetObjects("rbxassetid://75515993534839")[1].AnimSaves:WaitForChild("So Much More")
+
 --
 tool19.Equipped:Connect(function()
     if Character then
@@ -3747,8 +2220,8 @@ tool19.Equipped:Connect(function()
     getgenv().jumping = nil
     getgenv().moving = nil
     theme:Stop()
-    Humanoid.WalkSpeed = 10
-       getgenv().Animator6D(90600572265074, 1, true)
+    Humanoid.WalkSpeed = 13
+       getgenv().Animator6D(animthingy33, 1, true)
 -- Music
 Music19.Parent = Character
 Music19.SoundId = getcustomasset("anybodycanfindlove(except you.).mp3")
